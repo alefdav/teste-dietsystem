@@ -1,0 +1,112 @@
+
+.card2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ingredientes{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.microInputIngredientes{
+    display: grid;
+    grid-template-columns: 1fr 0.2fr 1fr 0.5fr;
+    
+}
+
+.microIngredientes1{
+   margin-right: 4px;
+   width: 20vw;
+}
+
+.microIngredientes2{
+    width: 3vw;
+    text-align: center;
+}
+
+.microIngredientes4{
+    width: 4vw;
+    margin-left: 4px;
+}
+
+.microIngredientes1, .microIngredientes2, .microIngredientes3, .microIngredientes4{
+    margin-bottom: 4px;
+}
+
+.ingredientesTxt{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.ingredientesTxt span{
+    padding: 15px;
+    font-size: 15px;
+}
+
+.mePreparo table td{
+    padding: 0;
+}
+
+.preparoId{
+    width: 50px;
+    text-align: center;
+}
+
+.preparoTxt{
+    width: 70vw;
+}
+
+@media (max-width: 1000px){
+    .card2{
+        flex-direction: column;
+    }
+    .ingredientes{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ingredientesTxt {
+        flex-direction: column;
+    }
+
+
+    .preparoId{
+        width: 20px;
+        text-align: center;
+    }
+    
+    .preparoTxt{
+        width: 58vw;
+    }
+
+    .microInputIngredientes{
+        display: grid;
+        grid-template-columns: 1fr 0.3fr 0.5fr 0.5fr;
+        
+    }
+    
+    .microIngredientes1{
+       
+       width:25vw;
+    }
+    .microIngredientes3{
+        width: 25vw;
+    }
+    .microIngredientes2{
+        width: 10vw;
+        text-align: center;
+    }
+    
+    .microIngredientes4{
+        width: 8vw;
+        
+        text-align: center;
+    }
+    
+    .microIngredientes1, .microIngredientes2, .microIngredientes3, .microIngredientes4{
+        margin-bottom: 4px;
+    }
+}

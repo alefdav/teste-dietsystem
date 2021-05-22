@@ -1,0 +1,113 @@
+.cardGrupo{
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr;
+}
+
+.pMedida{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.pMedidaFormatar{
+    display: flex;
+    flex-direction: row; 
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.nomePorcao{
+    width: 13vw;
+}
+
+.nomePorcoes{
+    width: 19vw;
+}
+
+.numeroPorcoes{
+    margin-bottom: 20px;
+}
+
+.nomePorcoesFormatar{
+    margin-left: 10px;
+}
+
+.pMedidaFormatar label{
+    white-space: nowrap;
+}
+
+.micro1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#micro1 i, #micro2 i{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+}
+
+#micro2{
+    display: none;
+}
+
+.micro2{
+    display: grid;
+
+}
+
+.microInput{
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    grid-gap: 0;
+}
+
+.microInput2{
+    width: 4vw;
+    text-align: center;
+}
+
+@media (max-width: 1000px){
+    .cardGrupo{
+        grid-template-columns: 1fr;
+    }
+
+    .pMedidaFormatar{
+        flex-direction: column;
+    }
+    .nomePorcoesFormatar, .nomePorcaoFormatar{
+        display: flex;
+        flex-direction: column;
+    }
+    .nomePorcoesFormatar{
+        margin: 0;
+    }
+    .nomePorcoesFormatar input, .nomePorcaoFormatar input{
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        margin-left: 0;
+    }
+
+    .nomePorcoesFormatar label{
+        margin-top: 15px;
+    }
+    .pMedidaFormatar label{
+        white-space: normal;
+    }
+
+    .numeroPorcoes, .pesoPorcao{
+        width: 60vw;
+    }
+
+    .micro1{
+        grid-template-columns: 1fr;
+    }
+
+    .microInput2{
+        width: 25vw;
+        text-align: center;
+    }
+}

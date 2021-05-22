@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/card1.css">
+    <link rel="stylesheet" href="css/card2.css">
+    <link rel="stylesheet" href="css/card3.css">
+    
+    <script src="https://kit.fontawesome.com/0fc75fc6b4.js" crossorigin="anonymous"></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function add_row()
+        {
+         $rowno=$("#employee_table tr").length;
+         $rowno=$rowno+1;
+         $("#employee_table tr:last").after("<tr id='row"+$rowno+"'><td><input class='preparoId' type='text' name='' id='' value='"+$rowno+"'></td><td><input type='text' name='' id='' value='' class='preparoTxt' onchange='add_row()'></td><td><i class='fas fa-trash' onclick=delete_row('row"+$rowno+"')></i></td></tr>");
+        }
+        function delete_row(rowno)
+        {
+         $('#'+rowno).remove();
+        }
+        </script>
+</head>
+<body>
+
+    <section class="card" id="card">
+        <div class="card1">
+            <div class="card1body">
+                <h4>Informação básica</h4>
+            
+                <form action="">
+                    
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" value="" style="margin-bottom: 3vh;">
+                    
+                    <label for="descricao">Descrição</label>
+                    <input type="text" id="descricao" name="descricao" value="" style="margin-bottom: 3vh;">
+                    
+                    <div class="cardForm1">
+                        <div class="tPreparo" style="margin-bottom: 3vh;">
+                            <label for="tPreparo">Tempo de preparo</label>
+                            <input type="time" id="tPreparo"  name="tPreparo" value="">
+                        </div>
+
+                        <div class="totalReceita">
+                            <label for="totalReceira">Peso total da receita</label>
+                            <div class="totalReceitaAjuste" style="margin-bottom: 3vh;">
+                                <input type="text" id="totalReceita1"  name="totalReceira" value="100">
+                                <input type="text" id="totalReceita2"  name="totalReceira" value="gramas">
+                            </div>
+                        </div>
+
+                        <div class="nPorcao" style="margin-bottom: 3vh;">
+                            <label for="nPorcao">Número de porções</label>
+                            <input type="text" id="nPorcao"  name="nPorcao" value="" onchange="alterarPorcao()">
+                        </div>
+                    </div>
+                    <label for="categoria">Categoria</label>
+                    <input type="text" id="categoria" name="categoria" value="">
+                
+                </form> 
+            </div>
+            <div class="formImg">
+                <img src="assets/user.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="card">
+        <h4>Ingredientes</h4>
+        <div class="card2">        
+            <div class="ingredientes">
+                        
+                    <div class="microInputIngredientes">
+                        <input type="text" class="microIngredientes1" name="" id="" value="">
+                        <input type="text" class="microIngredientes2" name="" id="" value="">
+                        <input type="text" class="microIngredientes3" name="" id="" value="">
+                        <input type="text" class="microIngredientes4" name="" id="" value="">
+                    </div>
+
+                    <div class="microInputIngredientes">
+                        <input type="text" class="microIngredientes1" name="" id="" value="">
+                        <input type="text" class="microIngredientes2" name="" id="" value="">
+                        <input type="text" class="microIngredientes3" name="" id="" value="">
+                        <input type="text" class="microIngredientes4" name="" id="" value="">
+                    </div>
+
+                    <div class="microInputIngredientes">
+                        <input type="text" class="microIngredientes1" name="" id="" value="">
+                        <input type="text" class="microIngredientes2" name="" id="" value="">
+                        <input type="text" class="microIngredientes3" name="" id="" value="">
+                        <input type="text" class="microIngredientes4" name="" id="" value="">
+                    </div>
+
+                    <div class="microInputIngredientes">
+                        <input type="text" class="microIngredientes1" name="" id="" value="">
+                        <input type="text" class="microIngredientes2" name="" id="" value="">
+                        <input type="text" class="microIngredientes3" name="" id="" value="">
+                        <input type="text" class="microIngredientes4" name="" id="" value="">
+                    </div>
+
+                    <div class="microInputIngredientes">
+                        <input type="text" class="microIngredientes1" name="" id="" value="">
+                        <input type="text" class="microIngredientes2" name="" id="" value="">
+                        <input type="text" class="microIngredientes3" name="" id="" value="">
+                        <input type="text" class="microIngredientes4" name="" id="" value="">
+                    </div>
+
+                    <div class="microInputIngredientes">
+                        <input type="text" class="microIngredientes1" name="" id="" value="">
+                        <input type="text" class="microIngredientes2" name="" id="" value="">
+                        <input type="text" class="microIngredientes3" name="" id="" value="">
+                        <input type="text" class="microIngredientes4" name="" id="" value="">
+                    </div>
+            </div>
+        
+                    <div class="ingredientesTxt">
+                        <span>
+                            <b>33.6</b>
+                            Proteínas(g)
+                        </span>
+                        <span>
+                            <b>7</b>
+                            Carboidratos(g)
+                        </span>
+                        <span>
+                            <b>7.7</b>
+                            Lipídeos(g)
+                            
+                        </span>
+                        <span>
+                            <div><b>238.1</b>kcal</div>
+                            
+                            <b>100.0%</b>
+                        </span>
+                        
+                    </div>
+            </div>
+    </section>
+
+    <section class="card">
+        <h4>Método de preparo</h4>
+        
+        <div class="mePreparo" id="mePreparo">
+            <table id="employee_table">
+                <tr id="row1">
+                 <td><input type="text" name="" id="" value="1" class="preparoId"></td>
+                 <td><input type="text" name="" id="" value="" class="preparoTxt" onchange="add_row()"></td>
+                 <td><i class="fas fa-trash" onclick="delete_row()"></i></td>
+                </tr>
+               </table>
+        </div>
+
+    </section>
+
+    <div class="cardGrupo">
+        <section class="card">
+            <div class="pMedida">
+            <h4>Porção e medidas caseiras</h4>
+            
+            <div class="pMedidaFormatar">
+                <div class="nomePorcaoFormatar">
+                    <label for="nomePorcao">Nome da Porção</label>
+                    <input type="text" id="nomePorcao" class="nomePorcao" name="nomePorcao" value="Copo">
+                </div>
+                
+                <div class="nomePorcoesFormatar">
+                    <label for="nomePorcoes">Nome da Porção no plural</label>
+                    <input type="text" id="nomePorcoes" class="nomePorcoes" name="nomePorcoes" value="Copos">
+                </div>
+            </div>
+                <label for="numeroPorcoes">Número de porções</label>
+                <input type="text" id="numeroPorcoes" class="numeroPorcoes" name="numeroPorcoes" value="">
+        
+                <label for="pesoPorcao">Peso de cada porção</label>
+                <input type="text" id="pesoPorcao" class="pesoPorcao" name="pesoPorcao" value="">
+            </div>
+        </section>
+    
+        <section class="card" id="micro1">
+                <i class="fas fa-sort-amount-down" onclick="alterarMicro1()"><h4>Micronutrientes por 2 copos</h4></i>
+                
+                <div class="micro1">
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="Vitamina A">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="50mg">
+                        </div>
+
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+    
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+    
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+    
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+    
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+    
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+    
+                        <div class="microInput">
+                        <input type="text" class="microInput1" id="nomePorcao" name="nomePorcao" value="">
+                        <input type="text" class="microInput2" id="nomePorcao" name="nomePorcao" value="">
+                        </div>
+                    
+                </div>
+    
+        </section>
+    
+        <section class="card" id="micro2">
+            <i class="fas fa-sort-amount-down" onclick="alterarMicro2()"><h4>Micronutrientes por 2 copos</h4></i>
+    
+            <div class="micro2">
+            
+                <div class="microInput">
+                <input type="text" class="microInput1" id="" name="" value="Carboidratos">
+                <input type="text" class="microInput2" id="" name="" value="10g">
+                </div>
+
+                <div class="microInput">
+                <input type="text" class="microInput1" id="" name="" value="Proteínas" style="background-color:white;">
+                <input type="text" class="microInput2" id="" name="" value="20g" style="background-color:white;">
+                </div>
+
+                <div class="microInput">
+                <input type="text" class="microInput1" id="" name="" value="Lipídeos">
+                <input type="text" class="microInput2" id="" name="" value="">
+                </div>
+                
+                <div class="microInput">
+                <input type="text" class="microInput1" id="" name="" value="Calorias" style="background-color:white;">
+                <input type="text" class="microInput2" id="" name="" value="" style="background-color:white;">
+                </div>
+
+            </div>
+    
+        </section>
+    </div>
+
+
+    <script>
+        function alterarMicro1(){
+            document.getElementById('micro2').style.display = 'block'
+            document.getElementById('micro1').style.display = 'none'
+        }
+        function alterarMicro2(){
+            document.getElementById('micro2').style.display = 'none'
+            document.getElementById('micro1').style.display = 'block'
+        }
+
+        function alterarPorcao(){
+            var x = document.getElementById('nPorcao').value;
+            document.getElementById('numeroPorcoes').value = x;
+
+            var y = document.getElementById('totalReceita1').value;
+            document.getElementById('pesoPorcao').value = x/y;
+        }
+    </script>
+    
+</body>
+</html>

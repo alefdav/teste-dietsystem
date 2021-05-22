@@ -1,0 +1,85 @@
+.card1{
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+}
+
+.card1body form{
+    display: flex;
+    flex-direction: column;
+}
+.cardForm1{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.tPreparo, .totalReceita, .nPorcao{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.tPreparo input{
+    width: 12vw;
+    height: 30px;
+    padding: 8px;
+}
+.totalReceita input{
+    width: 6vw;
+    height: 30px;
+    padding: 10px;
+}
+
+.totalReceita{
+    margin-left: 6vw;
+    margin-right: 6vw;
+}
+
+.nPorcao input{
+    width: 16vw;
+    height: 30px;
+    padding: 10px;
+}
+
+.formImg{
+    margin-left: 5vw;
+    margin-top: 11vh;
+    align-items: center;
+}
+
+@media (max-width: 800px){
+    .card1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cardForm1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tPreparo input{
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+    }
+
+    .totalReceita{
+        margin: 0;
+    }
+    .totalReceitaAjuste{
+        display: flex;
+        flex-direction: row;
+    }
+    .totalReceita input{
+        width: 30vw;
+        height: 30px;
+        margin: 0 10vw 0 0;
+    }
+    
+    .nPorcao input{
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+    }
+}
